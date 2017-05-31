@@ -1,0 +1,1 @@
+![Travis status](https://travis-ci.org/aubm/Golang-Codelab.svg?branch=master)
