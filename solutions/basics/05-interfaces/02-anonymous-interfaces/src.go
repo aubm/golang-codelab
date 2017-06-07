@@ -2,13 +2,19 @@ package basics
 
 import "fmt"
 
+// The Meeting.GetStarted method will not compile because the Meeting does not have
+// a Introducer property yet.
+// Can you fix it?
+// Meeting.Introducer should accept any of types Capuchin, Baboon or Mandrill as a value.
+// Also, Meeting.Introducer should not have a named type.
+
 type Meeting struct {
 	Introducer interface {
 		Introduce()
 	}
 }
 
-func (m Meeting) GetStared() {
+func (m Meeting) GetStarted() {
 	m.Introducer.Introduce()
 }
 

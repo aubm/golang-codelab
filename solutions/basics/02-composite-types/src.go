@@ -61,7 +61,7 @@ func MustReturn21YearsOldJohnDoe() Person {
 	}
 }
 
-// The function must panic is the json is invalid
+// The function must panic if the json is invalid
 // Learn more about the panic built-in here: https://gobyexample.com/panic
 func MustReturnAListOfPerson(jsonListOfPerson []byte) []Person {
 	listOfPerson := make([]Person, 0)
