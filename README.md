@@ -100,7 +100,10 @@ func main() {
   particular package can be built in order to generate an executable file. Any other name would have made this code
   to be considered as a library.
 - Then there is a list of imported dependencies. Each imported package exposes its api in an implicitly created
-  variable, named after the name of the package.
+  variable, named after the name of the package. It is important to note that only the package members whose name starts
+  with a capital letter are considered part of the package api. So that `FullName()` is "public", but `fullName()` would
+  be "private". The correct terminology simply is "exported" or "non exported". As we will see, the same rule applies to
+  a structure properties. This may seem a little odd but it turns out to be quite efficient!
 - Then there is the `main` function. Like for the package name, the `main` function is special because it will automatically
   be invoked by the runtime at program bootstrap.
   
