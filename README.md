@@ -103,6 +103,10 @@ func main() {
   variable, named after the name of the package.
 - Then there is the `main` function. Like for the package name, the `main` function is special because it will automatically
   be invoked by the runtime at program bootstrap.
+  
+## Now let's actually get started
+
+Follow [the instructions here](exercises/basics) to get through the basics.
 
 ## Going further
 
