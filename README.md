@@ -109,7 +109,9 @@ func main() {
   
 ## Now let's actually get started
 
-Follow [the instructions here](exercises/basics) to get through the basics.
+First follow [the instructions here](exercises/basics) to get through the basics.
+
+Then go to the [workshops section](exercises/workshops) to get to the real stuff :)
 
 ## Going further
 

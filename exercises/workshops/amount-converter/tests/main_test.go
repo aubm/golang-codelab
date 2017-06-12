@@ -65,7 +65,7 @@ func TestShouldRespondCorrectly(t *testing.T) {
 		return
 	}
 
-	convertedEurAmount := math.Ceil(czkRespBody.ConvertedAmount)
+	convertedEurAmount := math.Floor(czkRespBody.ConvertedAmount + .5)
 	if baseEurAmount != convertedEurAmount {
 		t.Errorf("converting back CZK to EUR should give the original amount in EUR but it did not, got %v EUR", convertedEurAmount)
 	}
