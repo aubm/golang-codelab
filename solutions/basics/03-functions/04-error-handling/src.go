@@ -24,6 +24,7 @@ func PingURL(targetURL string) error {
 // - the HTTP request fails
 // - the server responds with a status code that is different from 200
 // - the response body can't be read for some reason
+// Hint: you can read the content of the HTTP response body with ioutil.ReadAll https://golang.org/pkg/io/ioutil/#ReadAll
 func ReadURLContents(targetURL string) ([]byte, error) {
 	resp, err := http.Get(targetURL)
 	if err != nil {

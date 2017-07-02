@@ -68,7 +68,7 @@ func TestMustBeTrueIfThereAreTenEggsOrMore(t *testing.T) {
 }
 
 func TestMustReturnHello(t *testing.T) {
-	expected := "hello"
+	expected := "Hello"
 	if v := MustReturnHello(); v != expected {
 		t.Errorf(`expected "%v", got "%v"`, expected, v)
 	}

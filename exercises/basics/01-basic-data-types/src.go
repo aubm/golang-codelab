@@ -21,11 +21,13 @@ func MustBeTrueIfThereAreTenEggsOrMore(numberOfEggs int) bool {
 func MustReturnHello() string {
 }
 
+// Here you should only add new lines without changing the existing ones
 func MustReturnWorld() string {
-	return who // do not edit this line
+	return who
 }
 
+// Here you should only add new lines without changing the existing ones
 func MustSetToTrueAndReturn() bool {
-	var changeMe bool // do not edit the line
-	return changeMe   // do not edit the line
+	var changeMe bool
+	return changeMe
 }

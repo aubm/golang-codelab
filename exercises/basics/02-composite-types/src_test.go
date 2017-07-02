@@ -45,16 +45,17 @@ func TestMustReturnTheLastElementOfSlice(t *testing.T) {
 	}
 }
 
-func TestMustReturnTheGreatestElementOfSlice(t *testing.T) {
+func TestMustCountTheNumberOfLettersInEachWord(t *testing.T) {
 	for _, d := range []struct {
-		in       []int
-		expected int
+		in       []string
+		expected []int
 	}{
-		{in: []int{1, 3, 5}, expected: 5},
-		{in: []int{5, 3, 1}, expected: 5},
-		{in: []int{3, 5, 1}, expected: 5},
+		{in: []string{"one", "two", "three", "four", "five"}, expected: []int{3, 3, 5, 4, 4}},
+		{in: []string{"My", "favorite", "language", "is", "Golang"}, expected: []int{2, 8, 8, 2, 6}},
+		{in: []string{"To", "go", "or", "not", "to", "go", "that", "is", "the", "question"}, expected: []int{2, 2, 2, 3, 2, 2, 4, 2, 3, 8}},
 	} {
-		if actual := MustReturnTheGreatestElementOfSlice(d.in); actual != d.expected {
+		actual := MustCountTheNumberOfLettersInEachWord(d.in)
+		if !reflect.DeepEqual(actual, d.expected) {
 			t.Errorf("when input is %v, expected output to equal %v, but got %v", d.in, d.expected, actual)
 		}
 	}

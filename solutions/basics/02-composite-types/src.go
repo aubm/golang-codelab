@@ -18,14 +18,13 @@ func MustReturnTheLastElementOfSlice(elements []int) int {
 	return elements[len(elements)-1]
 }
 
-func MustReturnTheGreatestElementOfSlice(elements []int) int {
-	var greatestElement int
-	for _, element := range elements {
-		if element > greatestElement {
-			greatestElement = element
-		}
+// When given ["My", "favorite", "language", "is", "Golang"], it should return [2, 8, 8, 2, 6]
+func MustCountTheNumberOfLettersInEachWord(words []string) []int {
+	count := []int{}
+	for _, word := range words {
+		count = append(count, len(word))
 	}
-	return greatestElement
+	return count
 }
 
 func MustReturnTheNumberOfWords(text string) int {
@@ -63,6 +62,7 @@ func MustReturn21YearsOldJohnDoe() Person {
 
 // The function must panic if the json is invalid
 // Learn more about the panic built-in here: https://gobyexample.com/panic
+// You might want to read about Go and JSON: https://gobyexample.com/json
 func MustReturnAListOfPerson(jsonListOfPerson []byte) []Person {
 	listOfPerson := make([]Person, 0)
 	if err := json.Unmarshal(jsonListOfPerson, &listOfPerson); err != nil {

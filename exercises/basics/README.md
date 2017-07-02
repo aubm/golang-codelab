@@ -84,6 +84,7 @@ Solutions are given in `$GOPATH/src/github.com/aubm/golang-codelab/solutions/bas
 
 - https://gobyexample.com/arrays
 - https://gobyexample.com/slices
+- https://gobyexample.com/maps
 - https://gobyexample.com/sorting
 - https://gobyexample.com/structs
 

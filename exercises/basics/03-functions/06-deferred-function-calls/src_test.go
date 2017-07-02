@@ -7,15 +7,21 @@ import (
 )
 
 func TestAlwaysInvokeCallbackBeforeExitButOnlyWriteItOnce(t *testing.T) {
-	values := []int{-1, 9, 49, 99}
-	for _, v := range values {
-		changeMe := false
-		cb := func() {
-			changeMe = true
+	for _, d := range []struct {
+		in, expected int
+	}{
+		{in: -1, expected: 0},
+		{in: 9, expected: 10},
+		{in: 49, expected: 50},
+		{in: 99, expected: 100},
+	} {
+		changeMe := 200
+		cb := func(v int) {
+			changeMe = v
 		}
-		AlwaysInvokeCallbackBeforeExitButOnlyWriteItOnce(v, cb)
-		if !changeMe {
-			t.Errorf("when someNumber is %v, expected callback to have been called, but it was not", v)
+		AlwaysInvokeCallbackBeforeExitButOnlyWriteItOnce(d.in, cb)
+		if changeMe != d.expected {
+			t.Errorf("when someNumber is %v, expected callback to have been given %v, but got %v", d.in, d.expected, changeMe)
 		}
 	}
 }
