@@ -9,7 +9,7 @@ import (
 )
 
 func main() {
-	converter := &amounts.Converter{FixerApiUrl: "http://api.fixer.io"}
+	converter := &amounts.Converter{FixerApiUrl: "https://api.exchangeratesapi.io"}
 	amountHandlers := &api.AmountHandlers{Converter: converter}
 
 	http.HandleFunc("/convert", amountHandlers.Convert)

@@ -40,7 +40,7 @@ Here are the acceptance criteria:
 - when the provided target currency is invalid, the service must respond with a `400` status code
 - for any other errors, the service must respond with a `500` status code
 
-**Hint**: conversion rates change from one day to another, to get the conversion rates for today and for a given money, you should use the Fixer API: http://api.fixer.io/latest?base=EUR.
+**Hint**: conversion rates change from one day to another, to get the conversion rates for today and for a given money, you should use this API: https://api.exchangeratesapi.io/latest?base=EUR. The documentation is available here: https://exchangeratesapi.io/.
 
 ## How do I know when I'm finished?
 

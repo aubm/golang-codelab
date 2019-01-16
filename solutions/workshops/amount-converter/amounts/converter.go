@@ -38,7 +38,7 @@ func (c *Converter) fetchRate(baseCurrency string) (rates, error) {
 	defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
-		if resp.StatusCode == http.StatusUnprocessableEntity {
+		if resp.StatusCode > 399 && resp.StatusCode < 500 {
 			return nil, ErrInvalidBaseCurrency
 		}
 		return nil, fmt.Errorf("status code is %v", resp.StatusCode)
