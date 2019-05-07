@@ -14,7 +14,7 @@ func TestExecute(t *testing.T) {
 	func() {
 		buffers := make(chan *bytes.Buffer)
 		go func(done chan *bytes.Buffer) {
-			buffers <- Execute(10)
+			done <- Execute(10)
 		}(buffers)
 
 		select {
